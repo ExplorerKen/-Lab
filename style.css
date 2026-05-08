@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  background: #ffffff;
+}
+
+.intro {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ddd5df 4px, transparent 4px),
+    linear-gradient(90deg, #ddd5df 4px, transparent 4px);
+  background-size: 90px 90px;
+  opacity: 0.7;
+  transform: rotate(2deg) scale(1.1);
+}
+
+.mouse {
+  position: absolute;
+  width: 78vw;
+  max-width: 900px;
+  z-index: 2;
+  animation: mouseWalk 8s linear infinite;
+}
+
+.title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  transform: rotate(-3deg);
+  line-height: 1.05;
+}
+
+.title span {
+  display: block;
+  font-size: clamp(48px, 10vw, 120px);
+  color: white;
+  -webkit-text-stroke: 7px #53205c;
+  text-shadow: 8px 8px 0 #53205c;
+}
+
+.title strong {
+  display: block;
+  font-size: clamp(52px, 11vw, 130px);
+  color: #7ee7ff;
+  -webkit-text-stroke: 7px #53205c;
+  text-shadow: 8px 8px 0 #53205c;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 18%;
+  z-index: 4;
+  display: flex;
+  gap: 35px;
+}
+
+.buttons button,
+.buttons a {
+  border: none;
+  text-decoration: none;
+  background: #eeeeee;
+  color: #222;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.buttons a {
+  color: #ff5ca8;
+}
+
+.buttons .share {
+  background: #ef1020;
+  color: white;
+}
+
+@keyframes mouseWalk {
+  0% {
+    transform: translateX(-120vw);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
