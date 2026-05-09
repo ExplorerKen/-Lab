@@ -1,0 +1,87 @@
+* {
+  border-top: 45px solid #f4f4f4;
+
+  z-index: 2;
+}
+
+
+/* ニュース */
+.news-list {
+  margin-left: 320px;
+  margin-top: 160px;
+}
+
+.news-item {
+  margin-bottom: 100px;
+}
+
+.news-item a {
+  font-size: 34px;
+  font-weight: bold;
+
+  color: #9f5b7f;
+
+  text-decoration: underline;
+}
+
+.news-item:nth-child(2) a {
+  color: #5c9ab0;
+}
+
+.date {
+  margin-top: 12px;
+
+  font-size: 38px;
+  font-weight: bold;
+}
+
+
+/* GIFマウス */
+.mouse {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+
+  width: 180px;
+
+  z-index: 500;
+}
+
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 30px;
+    left: 20px;
+  }
+
+  .sidebar {
+    width: 190px;
+  }
+
+  .sidebar a {
+    font-size: 24px;
+  }
+
+  .speech-box {
+    left: 30px;
+    width: 180px;
+    height: 110px;
+    font-size: 32px;
+  }
+
+  .news-list {
+    margin-left: 0;
+    margin-top: 180px;
+  }
+
+  .news-item a {
+    font-size: 22px;
+  }
+
+  .date {
+    font-size: 24px;
+  }
+
+}
