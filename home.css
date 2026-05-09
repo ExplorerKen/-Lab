@@ -93,24 +93,43 @@ body {
   top: 25px;
   left: 25px;
 
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 
   background: white;
   border-radius: 50%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 
-  font-size: 55px;
   cursor: pointer;
-
   z-index: 1000;
 
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.menu-btn span {
+  width: 42px;
+  height: 5px;
+  background: #222;
+  border-radius: 10px;
+  transition: 0.35s;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
 
 /* ニュース背景 */
 .news-section {
