@@ -1,4 +1,184 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Yu Gothic", sans-serif;
+  background: #fff7f7;
+  overflow-x: hidden;
+}
+
+
+/* 上部画像 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 35px;
+  left: 45px;
+
+  color: #fff1e8;
+  font-size: 58px;
+  font-weight: bold;
+
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+}
+
+
+/* 左メニュー */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 230px;
+  height: 100vh;
+
+  background: #f8e5da;
+  border-right: 3px solid #a14d28;
+
+  z-index: 999;
+
+  padding-top: 40px;
+
+  transition: 0.35s;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 100px;
+}
+
+.sidebar li {
+  margin: 45px 25px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #b14b1b;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+/* メニューボタン */
+.menu-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+
+  width: 90px;
+  height: 90px;
+
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 55px;
+  cursor: pointer;
+
+  z-index: 1000;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+/* ニュース背景 */
+.news-section {
+  position: relative;
+
+  padding: 120px 80px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #ffecec,
+      #ffecec 4px,
+      #fff6f6 4px,
+      #fff6f6 8px
+    );
+
+  min-height: 900px;
+}
+
+
+/* 吹き出し */
+.speech-box {
+  position: absolute;
+  top: 25px;
+  left: 260px;
+
+  background: #f4f4f4;
+  border: 4px solid black;
+
+  border-radius: 30px;
+
+  width: 240px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 42px;
+}
+
+.speech-box::after {
+  content: "";
+
+  position: absolute;
+  left: 55px;
+  bottom: -45px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid black;
+}
+
+.speech-box::before {
+  content: "";
+
+  position: absolute;
+  left: 58px;
+  bottom: -38px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
   border-top: 45px solid #f4f4f4;
 
   z-index: 2;
