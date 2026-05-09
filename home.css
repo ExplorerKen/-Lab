@@ -90,8 +90,8 @@ body {
 /* メニューボタン */
 .menu-btn {
   position: fixed;
-  top: 25px;
-  left: 25px;
+  top: 445px;
+  left: 20px;
 
   width: 80px;
   height: 80px;
