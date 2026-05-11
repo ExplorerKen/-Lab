@@ -1,3 +1,3 @@
 document.querySelector(".share").addEventListener("click", () => {
-  alert("ゆか研究室へようこそ！");
+  alert("北野研究室へようこそ！");
 });
