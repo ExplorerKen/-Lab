@@ -13,6 +13,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  min-width: 1200px;
   background: white;
   display: flex;
   justify-content: center;
@@ -32,8 +33,7 @@ body {
 
 .mouse {
   position: absolute;
-  width: 78vw;
-  max-width: 900px;
+  width: clamp(180px, 28vw, 420px);
   z-index: 2;
   animation: mouseWalk 8s linear infinite;
 }
@@ -49,6 +49,7 @@ body {
 .title span {
   display: block;
   font-size: clamp(48px, 10vw, 120px);
+  white-space: nowrap;
   color: white;
   -webkit-text-stroke: 7px #53205c;
   text-shadow: 8px 8px 0 #53205c;
@@ -57,6 +58,7 @@ body {
 .title strong {
   display: block;
   font-size: clamp(52px, 11vw, 130px);
+  white-space: nowrap;
   color: #7ee7ff;
   -webkit-text-stroke: 7px #53205c;
   text-shadow: 8px 8px 0 #53205c;
@@ -64,7 +66,7 @@ body {
 
 .buttons {
   position: absolute;
-  bottom: 18%;
+  bottom: 10%;
   z-index: 4;
   display: flex;
   gap: 35px;
@@ -76,9 +78,9 @@ body {
   text-decoration: none;
   background: #eeeeee;
   color: #222;
-  padding: 14px 36px;
+  padding: 10px 26px;
   border-radius: 999px;
-  font-size: 24px;
+  font-size: clamp(14px, 1.5vw, 22px);
   font-weight: bold;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
