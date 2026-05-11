@@ -48,8 +48,8 @@ body {
   width: 260px;
   height: 100vh;
 
-  background: #f8e5da;
-  border-right: 3px solid #a14d28;
+  background: transparent;
+  border-right: none;
 
   z-index: 1500;
 
@@ -82,9 +82,11 @@ body {
 
 .sidebar a {
   text-decoration: none;
-  color: #b14b1b;
+  color: white;
   font-size: 32px;
   font-weight: bold;
+
+  text-shadow: 0 0 10px rgba(0,0,0,0.55);
 }
 
 
