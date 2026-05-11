@@ -31,7 +31,7 @@ body {
   left: 250px;
 
   color: #fff1e8;
-  font-size: clamp(30px, 4vw, 58px);
+  font-size: clamp(20px, 2.5vw, 40px);
   white-space: nowrap;
   font-weight: bold;
 
