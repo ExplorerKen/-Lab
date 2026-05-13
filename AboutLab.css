@@ -1,7 +1,135 @@
-.left-menu a.active {
-  color: #d9791f;
+body{
+    margin:0;
+    font-family:"Yu Gothic", sans-serif;
+
+    background:
+    radial-gradient(#efc7a3 1.2px, transparent 1.2px);
+
+    background-size:16px 16px;
+    background-color:#fffdf9;
 }
 
-.content {
-  display: flex;
+
+/* 整体布局 */
+body{
+    display:flex;
+}
+
+
+/* 左菜单 */
+.left-menu{
+    width:220px;
+    padding:30px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+
+.left-menu a{
+    text-decoration:none;
+    color:black;
+
+    font-size:22px;
+    font-weight:bold;
+
+    transition:0.2s;
+}
+
+
+.left-menu a:hover{
+    color:#d9791f;
+}
+
+
+.left-menu a.active{
+    color:#d9791f;
+}
+
+
+
+/* 主内容区域 */
+.content{
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    gap:70px;
+
+    padding:40px 60px;
+}
+
+
+/* 文字区域 */
+.text-box{
+    width:480px;
+
+    font-size:24px;
+    font-weight:bold;
+
+    line-height:1.55;
+
+    color:black;
+
+    margin-top:110px;
+}
+
+
+
+/* 图片 */
+.content img{
+    width:420px;
+
+    border-radius:6px;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.25);
+
+    margin-top:20px;
+}
+
+
+
+/* 响应式 */
+@media (max-width:1200px){
+
+    .content{
+        flex-direction:column;
+        align-items:center;
+
+        margin-left:0;
+
+        width:100%;
+
+        padding-top:140px;
+    }
+
+    .left-menu{
+        width:100%;
+        height:auto;
+
+        flex-direction:row;
+        justify-content:center;
+
+        background:white;
+
+        z-index:1000;
+    }
+
+    .text-box{
+        width:90%;
+    }
+
+    .content img{
+        width:80%;
+    }
 }
