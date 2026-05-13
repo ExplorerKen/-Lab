@@ -1,3 +1,7 @@
 .left-menu a.active {
   color: #d9791f;
 }
+
+.content {
+  display: flex;
+}
