@@ -83,7 +83,16 @@ body{
     margin-top:110px;
 }
 
+/* 段落設定 */
+.text-box p {
 
+    margin-bottom: 28px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+}
 
 /* 图片 */
 .content img{
