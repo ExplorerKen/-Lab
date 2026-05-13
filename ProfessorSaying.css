@@ -1,1 +1,48 @@
+body {
+    background: repeating-dot-pattern; /* 你可以根据需要定义背景 */
+    font-family: sans-serif;
+}
 
+.left-menu {
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+.left-menu a.active {
+    color: #d9791f; /* 当前菜单项高亮颜色 */
+}
+
+.container {
+    display: flex;
+}
+
+.professor-image {
+    margin: 20px;
+}
+
+.circular-gif {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.speech-bubble {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+}
